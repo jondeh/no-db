@@ -23,7 +23,7 @@ class Chord extends Component {
         let newNotes = myNotes.join('')
         console.log(this.state.isEdit, "EDIT")
         return (
-            <div className="chord">
+            <div className={this.props.chordPicUpdate}>
                 <div className="chord-title"
                     onClick={this.isEdit}>
                     {
@@ -38,12 +38,12 @@ class Chord extends Component {
                 <div className="tones">
                     {chordTones.replace(/,/g, '-').replace(/E-G-B-D-A/g, 'Aposhian')}
                 </div>
-                <div className="buttons">
+                <div className={`${this.props.chordPicUpdate}-buttons`}>
                     {/* <button className="edit"
                         onClick={() => editChords(chords.id, chords)}
                     >EDIT
                     </button> */}
-                    <button className="edit"
+                    <button className={`${this.props.chordPicUpdate}-edit`}
                         onClick={() => deleteChords(chords.id)}
                     >X
                     </button>

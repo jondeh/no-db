@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header(props){
     return(
-        <div className="header-container">
+        <div className={props.headerStyle}>
             <div className="logo">
                 <div className="logo-ryan"></div>
             </div>

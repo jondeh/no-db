@@ -12,8 +12,8 @@ class ChordsComponent extends Component {
         const {myChords, deleteChords, editChords, myNotes, handleNameSubmit, handleChange} = this.props
         return(
             <div className="chords-container">
-                <div className="chords-title"
-                onClick={this.props.changeBackground}><h3>My Chords</h3></div>
+                <div className={`${this.props.chordPicUpdate}-title-s`}
+                onClick={this.props.updateStyle}><h3>My Chords</h3></div>
                 <div className="chords-grid">
                     
                 {myChords.map((e,i) => <Chord 
@@ -26,6 +26,7 @@ class ChordsComponent extends Component {
                                             myNotes={myNotes}
                                             handleNameSubmit={handleNameSubmit}
                                             handleChange={handleChange}
+                                            chordPicUpdate={this.props.chordPicUpdate}
                                         />)}
                     
                 </div>

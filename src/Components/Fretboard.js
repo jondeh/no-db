@@ -40,6 +40,14 @@ class Fretboard extends Component {
         this.setState({className: "fretboard-containerRyan"})
     }
 
+    click5 = () => {
+        this.setState({className: "fretboard-containerUnicorn"})
+    }
+
+    click6 = () => {
+        this.setState({className: 'fretboard-containerPerez'})
+    }
+
     render() {
         const { addChordFn, addNotesFn, myNotes } = this.props
 
@@ -55,6 +63,7 @@ class Fretboard extends Component {
                         addNotesFn={addNotesFn}
                         myNotes={myNotes.join('')}
                         setFalse={this.setFalse}
+                        updateHighlight={this.props.updateHighlight}
                         />
                     })}
                 </div>
@@ -82,6 +91,7 @@ class Fretboard extends Component {
                                                                 fret={fret}
                                                                 myNotes={myNotes.join('')}
                                                                 setFalse={false}
+                                                                updateHighlight={this.props.updateHighlight}
                                                             />
                             
                             // <div className="note" 
@@ -106,6 +116,8 @@ class Fretboard extends Component {
                 <button className="light-wood"
                 onClick={this.click3}></button>
                 <button className="ryan" onClick={this.click4}></button>
+                <button className="unicorn" onClick={this.click5}></button>
+                <button className="perez" onClick={this.click6}></button>
                 </div>
             </>
         )

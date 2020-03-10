@@ -9,12 +9,25 @@
 
 .header-container {
   height: 100px;
-  border: 1px solid black;
+  border-bottom: 4px solid black;
   padding: 4px 800px 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: url('./stars.jfif');
+  background-position: center;
+}
+
+.header-container2 {
+  height: 100px;
+  border-bottom: 4px solid black;
+  padding: 4px 800px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url('./vine.jpg');
+  background-position: center;
+  background-size: 120%;
 }
 
 .logo {
@@ -70,6 +83,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  border-bottom: 4px solid black;
 }
 
 .body2 {
@@ -78,6 +92,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+  border-bottom: 4px solid black;
 }
 
 .fretboard-body {
@@ -144,6 +159,64 @@
   position: relative;
   box-shadow: 4px 2px 5px 2px black;
   box-sizing: border-box;
+}
+
+.fretboard-containerUnicorn {
+  background: url('./unicorn.jpg');
+  background-position: 63%;
+  background-size: 490%;
+  /* border: 2px solid black; */
+  height: 75%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [strings]);
+  margin-right: 0px;
+  position: relative;
+  box-shadow: 4px 2px 5px 2px black;
+  box-sizing: border-box;
+}
+
+.fretboard-containerPerez {
+  background: url('./IMG_1509.JPG');
+  background-position: 50%;
+  background-size: 255%;
+  /* border: 2px solid black; */
+  height: 75%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr [strings]);
+  margin-right: 0px;
+  position: relative;
+  box-shadow: 4px 2px 5px 2px black;
+  box-sizing: border-box;
+}
+
+.perez {
+  border-radius: 360px;
+  border: 0;
+  box-shadow: 0 0 2px 3px black;
+  height: 40px;
+  width: 40px;
+  background: url('./IMG_1509.JPG');
+  background-size: 170%;
+}
+
+.perez:hover {
+  transform: translateY(-2px)
+}
+
+.unicorn {
+  border-radius: 360px;
+  border: 0;
+  box-shadow: 0 0 2px 3px black;
+  height: 40px;
+  width: 40px;
+  background: url('./unicorn2.jfif');
+  background-size: 170%;
+}
+
+.unicorn:hover {
+  transform: translateY(-2px)
 }
 
 .circles-container {
@@ -350,7 +423,7 @@
   width: 100%;
 }
 
-.chords-title {
+.chord-title-s {
   font-size: 28px;
   letter-spacing: 1px;
   height: 60px;
@@ -359,6 +432,18 @@
   margin-right: 150px;
   margin-top: 15px;
   color: white;
+  font-style: italic;
+}
+
+.chord2-title-s {
+  font-size: 28px;
+  letter-spacing: 1px;
+  height: 60px;
+  width: 190px;
+  /* border: 1px solid black; */
+  margin-right: 150px;
+  margin-top: 15px;
+  color: black;
   font-style: italic;
 }
 
@@ -391,9 +476,29 @@
   color: black;
 }
 
+.chord2 {
+  height: 250px;
+  width: 250px;
+  font-size: 27px;
+  font-weight: 500px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url('./big-leaf.png');
+  background-position: center;
+  background-size: 105%;
+  color: darkgreen;
+}
+
 .chord:hover {
-  box-shadow: 0 0 2px 2px black;
-  transform: translateY(-2px)
+  box-shadow: 0 0 5px 5px #fdbafd;
+  /* transform: translateY(-2px) */
+}
+
+.chord2:hover {
+  box-shadow: 0 0 5px 5px darkgreen;
 }
 
 .chord-title {
@@ -404,7 +509,7 @@
 }
 
 .chord-title:hover {
-  box-shadow: 0 0 3px 3px lavender;
+  box-shadow: 0 0 3px 3px;
 }
 
 .tones {
@@ -414,7 +519,7 @@
 
 
 
-.buttons {
+.chords-buttons {
   /* height: 30%;
   width: 50%; */
   color: white;
@@ -423,16 +528,27 @@
   justify-content: space-evenly;
 }
 
-.edit {
-  border: 1px solid black;
+.chord-edit {
   background: transparent;
   border: 3px solid black;
   font-size: 28px;
 }
 
-.edit:hover {
-  box-shadow: 0 0 1px 1px;
+.chord2-edit {
+  background: transparent;
+  border: 3px solid darkgreen;
+  color: darkgreen;
+  font-size: 28px;
 }
+
+.chord-edit:hover {
+  box-shadow: 0 0 3px 3px indigo;
+}
+
+.chord2-edit:hover {
+  box-shadow: 0 0 3px 3px;
+}
+
 
 
 .note:hover {
@@ -440,6 +556,7 @@
   /* background-color: rgb(209, 209, 209); */
   box-shadow: 0 0 2px 2px black;
 }
+
 .note:active {
   background-color: black;
 }
@@ -472,7 +589,7 @@
 
 
 footer {
-  height: 80px;
+  height: 60px;
   background: url('./stars.jfif');
   background-position: center;
 }

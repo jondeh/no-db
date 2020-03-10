@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer(props){
     return(
-        <footer>
+        <footer className={props.footerStyle}>
             Footer
         </footer>
     )

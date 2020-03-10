@@ -28,7 +28,7 @@ class Note extends Component {
         const {addChordFn, addNotesFn, fretInd, strInd, fret, setFalse} = this.props
         return(
                         <div className="note"
-                                style={{boxShadow: this.state.colorToggle && "0 0 10px 5px #fdbafd"}} 
+                                style={{boxShadow: this.state.colorToggle && `0 0 10px 5px ${this.props.updateHighlight}`}} 
                                 key={fretInd + 1}
                                 onClick={(event) => {
                                     this.setState({colorToggle: !this.state.colorToggle})

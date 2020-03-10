@@ -21,14 +21,14 @@ class Body extends Component {
         })
     }
 
-    click1 = () => {
-        if(this.state.className === "body"){
-            this.setState({className: 'body2'}
-            )}
-            else if(this.state.className === "body2"){
-                this.setState({className: "body"})
-            }
-    } 
+    // click1 = () => {
+    //     if(this.state.className === "body"){
+    //         this.setState({className: 'body2'}
+    //         )}
+    //         else if(this.state.className === "body2"){
+    //             this.setState({className: "body"})
+    //         }
+    // } 
 
     addChord = () => {
         let joinChords = this.state.myNotes.join("-")
@@ -82,11 +82,12 @@ class Body extends Component {
     render(){
         console.log(this.state.myNotes, "state")
     return(
-        <div className={this.state.className}>
+        <div className={this.props.bodyStyle}>
             <Fretboard 
                 addChordFn={this.addChord}
                 addNotesFn={this.addNotes}
-                myNotes={this.state.myNotes}/>
+                myNotes={this.state.myNotes}
+                updateHighlight={this.props.updateHighlight}/>
             <ChordsComponent 
                 myChords={this.state.myChords}
                 deleteChords={this.deleteChords}
@@ -94,7 +95,8 @@ class Body extends Component {
                 myNotes={this.state.myNotes}
                 handleNameSubmit={this.handleNameSubmit}
                 handleChange={this.handleChange}
-                changeBackground={this.click1}/>
+                updateStyle={this.props.updateStyle}
+                chordPicUpdate={this.props.chordPicUpdate}/>
         </div>
         )
     }

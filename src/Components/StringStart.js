@@ -25,7 +25,7 @@ class StringStart extends Component {
         const {strInd, string, addNotesFn, myNotes, setFalse} = this.props
         return(
             <div className="string-start"
-                            style={{boxShadow: this.state.colorToggle && "0 0 10px 5px #fdbafd"}}
+                            style={{boxShadow: this.state.colorToggle && `0 0 10px 5px ${this.props.updateHighlight}`}}
                             key={strInd}
                             onClick={(event) => {
                                 this.setState({colorToggle: !this.state.colorToggle})
