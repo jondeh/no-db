@@ -30,6 +30,7 @@ class ChordsComponent extends Component {
                                         />)}
                     
                 </div>
+                
             </div>
         )
     }

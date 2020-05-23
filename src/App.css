@@ -462,6 +462,7 @@
   grid-template-columns: repeat(6, 1fr [strings]);
 }
 
+
 .chord {
   height: 250px;
   width: 250px;
@@ -555,6 +556,7 @@
   background: url('./stars.jfif');
   /* background-color: rgb(209, 209, 209); */
   box-shadow: 0 0 2px 2px black;
+  /* transform: translateY(-10px) */
 }
 
 .note:active {

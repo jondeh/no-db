@@ -9,7 +9,8 @@ class Body extends Component {
             this.state = {
                 myNotes: ["X", "X", "X", "X", "X", "X"],
                 myChords: [],
-                className: "body"
+                className: "body",
+                chordName: ""
             }
     }
 
@@ -20,15 +21,6 @@ class Body extends Component {
             myNotes: newNotes,
         })
     }
-
-    // click1 = () => {
-    //     if(this.state.className === "body"){
-    //         this.setState({className: 'body2'}
-    //         )}
-    //         else if(this.state.className === "body2"){
-    //             this.setState({className: "body"})
-    //         }
-    // } 
 
     addChord = () => {
         let joinChords = this.state.myNotes.join("-")
@@ -80,14 +72,16 @@ class Body extends Component {
     }
 
     render(){
-        console.log(this.state.myNotes, "state")
+        console.log(this.state.chordName, "chordName")
+        console.log(this.state.myChords, "myChords")
     return(
         <div className={this.props.bodyStyle}>
             <Fretboard 
                 addChordFn={this.addChord}
                 addNotesFn={this.addNotes}
                 myNotes={this.state.myNotes}
-                updateHighlight={this.props.updateHighlight}/>
+                updateHighlight={this.props.updateHighlight}
+                myChords={this.state.myChords}/>
             <ChordsComponent 
                 myChords={this.state.myChords}
                 deleteChords={this.deleteChords}

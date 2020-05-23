@@ -50,7 +50,7 @@ class Fretboard extends Component {
 
     render() {
         const { addChordFn, addNotesFn, myNotes } = this.props
-
+        
         return (
             <>
             <div className='fretboard-body'>
@@ -93,13 +93,6 @@ class Fretboard extends Component {
                                                                 setFalse={false}
                                                                 updateHighlight={this.props.updateHighlight}
                                                             />
-                            
-                            // <div className="note" 
-                            //     key={fretInd + 1}
-                            //     onClick={(event) => {
-                            //     addNotesFn(event, strInd, fretInd + 1)
-                            //     }}>{fret}</div>
-
                                 )}
                         </div>
                     })}
@@ -107,6 +100,7 @@ class Fretboard extends Component {
                 <button
                     className="submit"
                     onClick={addChordFn}>ADD CHORD</button>
+                    
             </div>
                 <div className="button-container">
                 <button className="dark-wood"

@@ -9,12 +9,12 @@ class StringStart extends Component {
     }
 
     componentDidUpdate(prevProps){
-        console.log(prevProps, "prevprops")
-        console.log(this.props, "this.props")
+        // console.log(prevProps, "prevprops")
+        // console.log(this.props, "this.props")
         if(prevProps.myNotes !== this.props.myNotes){
-            console.log("insidefirst")
+            // console.log("insidefirst")
         if(this.props.myNotes === 'XXXXXX'){
-            console.log("insidesecond")
+            // console.log("insidesecond")
             this.setState({colorToggle: false})
          }
         }
